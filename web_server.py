@@ -48,9 +48,8 @@ class WebServer:
                     self.rlist.append(connfd)  # 增加监控
                 else:
                     # 收到http请求
-                    try:
-                        self.handle(r)
-                    except:
+                    self.handle(r)
+
 
 
 
