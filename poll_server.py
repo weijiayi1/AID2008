@@ -28,6 +28,7 @@ while True:
     for fd, event in events:
         # 有客户端连接
         if fd == sockfd.fileno():
+            print('events', events)
             connfd, addr = map[fd].accept()
             print("Connect from", addr)
             connfd.setblocking(False)

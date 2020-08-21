@@ -27,6 +27,8 @@ while True:
     # 分类讨论 分两类  sockfd -- connfd
     for fd, event in events:
         # 有客户端连接
+        print('events',events)
+        print('fd',fd)
         if fd == sockfd.fileno():
             connfd, addr = map[fd].accept()
             print("Connect from", addr)
